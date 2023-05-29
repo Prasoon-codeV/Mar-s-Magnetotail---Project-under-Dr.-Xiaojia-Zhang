@@ -1,0 +1,32 @@
+# Minutes of Meeting - Task list
+
+Task 1 - Downloading the MAVEN Satellite and Validation -   
+
+- Download sts file for 2015-09-15 from [maven_website] - (https://pds-ppi.igpp.ucla.edu/search/view/?f=yes&id=pds://PPI/maven.mag.calibrated/data/pc/1sec/2015/09/mvn_mag_l2_2015258pc1s_20150915_v01_r01&o=1) 
+	- Plot one-day interval magnetic field components (Bx, By, and Bz planetocentric)
+	    - Put the range of vertical axis of the plots to be (-20,20) nT (to be able to see the main magnetic field variations)
+        - Plot the satellite trajectories - Y vs X, and Z vs X plots.
+    - Obtain Nightside magnetic field plots by applying conditions:
+        - X < 0
+        - sqrt(Y**2 + Z**2) < |X|
+
+Task 2 - Obtain Bx Nightside Crossing Points - 
+    - Identify the points where plot crosses Bx = 0 line 
+    - Separate the points such that crossing is not happening due to noisy nature of data
+        - the crossing should be more or less symmetric around crossing point (like odd functions at origin)
+        - a net monotonic trend should be seen in the curve, upto a certain range (example across 50 samples at least)
+    - Two extremum points, enclosing the crossing point, should have magnitude between 3nT to 30nT (3nT < |Bx| < 30nT).
+        
+Task 3 - Converting to LMN Coordinates -
+    - 
+    
+    
+    
+    - you may try LMN procedure for 7-9, 3, 6 events; and the we can return to collection of more events.
+	- plot for these events the original Bx, By, Bz magnetic field components and LMN components, Bl, Bm, and Bn. Better to do on the same plot, e.g. by three different color and solid/dashed lines
+	- add eigenvectors and eigennumbers on each figure (to have an idea how well LMN system is determined)
+	* move forward with collection of more events
+* now when we have >10 crossings let us figure out how they are distributed in space. Please, make a scatter plot of locations of all your events in X,Y and X,sqrt(Y^2+Z^2) planes. 
+	* Use the Martian radius as a unit of coordinate measurements. Also please make a scatter plot with max|Bl|, X space (one point for one crossing)
+	* about max|Bl|, X space: for each crossing (each event) determine two values: averaged X coordinate and maximum value of |Bl| then plot distribution of points (one point for one crossing) in (X, max|Bl|) space
+* 
